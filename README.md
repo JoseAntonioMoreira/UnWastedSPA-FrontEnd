@@ -1,6 +1,8 @@
 # UnWasted
 ## Single Page Application (SPA) Frontend
 
+Welcome to UnWasted, a platform designed to connect local producers with the community while tackling food waste. Our mission is to make it easier for producers to share what they have to offer and for consumers to access fresh, local products right where they are.
+
 This repository contains the frontend code for a Single Page Application (SPA) developed using JavaScript. The application interacts with a backend server to provide a seamless user experience. This project uses **CORS**, **Axios**, and **Express** to manage API requests and data flow between the frontend and backend.
 
 ---
@@ -16,6 +18,9 @@ This repository contains the frontend code for a Single Page Application (SPA) d
 ---
 
 ## About
+
+In this SPA producers can create posts to showcase what they have available, whether it's fruits, vegetables, or any other fresh produce. 
+Consumers can then browse these posts to find quality products nearby, supporting local businesses and reducing food waste.
 
 This is the frontend of a larger project that relies on a backend server (available in a separate repository). The application is designed as a Single Page Application (SPA) to ensure smooth navigation without page reloads. It uses modern JavaScript techniques and libraries to communicate efficiently with the backend server.
 
