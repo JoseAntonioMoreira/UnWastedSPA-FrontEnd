@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UnWasted</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script type="module" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/home">UnWasted</a>
+            <div>
+                <a class="btn btn-outline-light btn-custom" href="/shops">Marketplace</a>
+                <a class="btn btn-primary btn-custom" href= "/products">Products</a>
+            </div>
+            <form class="d-flex ms-auto">
+             <!-- Este é um comentário  <input class="form-control me-2" type="email" placeholder="Email"> 
+               <input class="form-control me-2" type="password" placeholder="Senha"> TEXT BOX PARA LOGIN -->
+               <a class="btn btn-danger me-2" data-bs-toggle="modal" data-bs-target="#deletePostModal" href="#">Delete</a> <!--COR ALTERADA PARA VERMELHO-->
+               <a class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#registerProducerModal" href="#">Create</a>
+            
+            </form>
+        </div>
+    </nav>
+    
+    <div class="modal fade" id="deletePostModal" tabindex="-1" aria-labelledby="deletePostModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title" id="deletePostModalLabel">Delete Your Post</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="deletePostForm" method="POST">
+                        <div class="mb-3">
+                            <label for="postEmail" class="form-label">Email of the Post Owner</label>
+                            <input type="email" id="postEmail" name="postEmail" class="form-control"
+                                placeholder="Enter the email of the post owner" required>
+                        </div>
+                        <button type="button" id="deletePostButton" class="btn btn-danger w-100">Delete Post</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Register as Producer -->
+
+    <div class="modal fade" id="registerProducerModal" tabindex="-1" aria-labelledby="registerProducerLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="registerProducerLabel">Register as Producer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="createProducerForm" action="/submit_producer" method="POST" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" id="address" name="address" class="form-control"
+                                placeholder="Enter your address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" id="location" name="location" class="form-control"
+                                placeholder="Enter your location" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-control"
+                                placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" name="password" class="form-control"
+                                placeholder="Enter your password" minlength="8" required>
+                        </div>
+
+                        <!-- Dynamic Product Fields -->
+                        <div id="productList">
+                            <div class="row mb-3 product-item" id="product-1">
+                                <div class="col">
+                                    <input type="text" class="form-control" id="product-name-1" name="product-name[]"
+                                        placeholder="Product Name" required>
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" id="product-quantity-1"
+                                        name="product-quantity[]" min="1" placeholder="Quantity" required>
+                                </div>
+                                <div class="col">
+                                    <input type="number" class="form-control" id="product-price-1"
+                                        name="product-price[]" min="0" step="0.01" placeholder="Price" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" id="addProductBtn" class="btn btn-secondary w-100">Add Product</button>
+                        <button type="submit" class="btn btn-success w-100 mt-3">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container"></div>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p class="mb-0">&copy; 2024 UnWasted. Reserved copyright.</p>
+    </footer>
+    <script src="js/service/registrationPost.js" type="module"></script>
+    <script src="js/service/deletePost.js" type="module"></script>
+</body>
+
+</html>

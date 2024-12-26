@@ -1,0 +1,276 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+
+#listShow{
+display: flex;
+justify-content: center;
+}
+
+
+#footing {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 0px;
+    align-items: flex-end;
+    transform: translate(0px, 50px);
+}
+
+#footing p {
+    margin: 5px 0;
+}
+
+#product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+    gap: 20px; /* Space between the cards */
+}
+
+/* Fundo com imagem subtil */
+body {
+    background-image: url('https://fornerialuce.com.br/media/magefan_blog/legumes-e-verduras.jpg'); /* Imagem Vegetal */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color:#d4c3a2;
+    background-blend-mode:luminosity /* Torna a imagem subtil */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.btn-custom {
+    margin-right: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0px 2px 4px #d4c3a2;
+}
+
+footer {
+    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #d1d1d1;
+}
+
+.small-img {
+    width: 300px;
+    height: 300px;  
+    object-fit: cover;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo Geral */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Posicionar conteúdo no canto inferior esquerdo */
+.conteudo-inferior-esquerdo {
+    position: fixed;
+    bottom: 20px; /* Distância do fundo */
+    left: 20px; /* Distância da lateral esquerda */
+    color: white; /* Cor do texto */
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre imagem e texto */
+}
+
+/* Logo pequeno */
+.logo {
+    width: 300px;
+    height: auto;
+}
+
+/* Estilização do texto */
+.texto-sobre-nos h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.texto-sobre-nos p {
+    margin: 5px 0;
+    font-size: 1rem;
+    max-width: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    background-image: url('https://fornerialuce.com.br/media/magefan_blog/legumes-e-verduras.jpg'); /* Imagem Vegetal */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color:#d4c3a2;
+    background-blend-mode:luminosity /* Torna a imagem subtil */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+nav {
+    padding: 15px 20px;
+    background: rgb(70, 111, 9);
+}
+
+
+#body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    text-align: center;
+}
+
+
+#contactos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1; 
+}
+
+
+#SearchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+#searchInput {
+    padding: 5px;
+    width: 300px;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+#listShow{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+#footing {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 0px;
+    align-items: flex-end;
+}
+
+#footing p {
+    margin: 5px 0;
+}
+
+/* Style for the product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Create 5 equal-width columns */
+    gap: 20px; /* Space between the cards */
+}
+
+.custom-header {
+    font-size: 2.5rem;
+    color: white; /* Cor escura */
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    border-bottom: 2px solid white; /* Linha decorativa */
+    padding-bottom: 10px;
+}
+
+.custom-font {
+    font-family: 'Courier New', Courier, monospace; /* Substitua pelo tipo de letra desejado */
+    font-weight: bold; /* Ajusta o peso */
+    color: white; /* Ajusta a cor */
+    text-shadow: 2px 2px 4px black, -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black; /* Delineado preto */
+}
+
+
+
