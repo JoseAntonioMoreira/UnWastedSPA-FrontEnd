@@ -22,7 +22,7 @@ This repository contains the frontend code for a Single Page Application (SPA) d
 In this SPA producers can create posts to showcase what they have available, whether it's fruits, vegetables, or any other fresh produce. 
 Consumers can then browse these posts to find quality products nearby, supporting local businesses and reducing food waste.
 
-This is the frontend of a larger project that relies on a backend server (available in a separate repository). The application is designed as a Single Page Application (SPA) to ensure smooth navigation without page reloads. It uses modern JavaScript techniques and libraries to communicate efficiently with the backend server.
+This is the frontend of a larger project that relies on a backend server (available [here](https://github.com/JoseAntonioMoreira/UnWasted-BackEnd)). The application is designed as a Single Page Application (SPA) to ensure smooth navigation without page reloads. It uses modern JavaScript techniques and libraries to communicate efficiently with the backend server.
 
 ---
 
@@ -57,15 +57,17 @@ This is the frontend of a larger project that relies on a backend server (availa
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/spa-frontend.git
+   git clone https://github.com/JoseAntonioMoreira/UnWasted-FrontEnd.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd spa-frontend
+   cd UnWasted-FrontEnd
    ```
 3. Install dependencies:
    ```bash
-   npm install
+   npm install express
+   npm install axios
+   npm install cors
    ```
 4. Start the development server:
    ```bash
